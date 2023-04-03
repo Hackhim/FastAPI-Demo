@@ -61,6 +61,6 @@ async def list_coingecko_coins() -> list[CoingeckoCoin]:
 
 
 @app.get("/coingecko/coins/{cg_id}")
-async def retrieve_coingecko_coin(cg_id: int):
+async def retrieve_coingecko_coin(cg_id: int) -> CoingeckoCoin:
     """Retrieve a Coingecko Coin"""
     return generate_random_cg_coin(cg_id)
