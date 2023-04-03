@@ -1,3 +1,4 @@
+"""Module for a Fast API Demo"""
 import random
 from typing import Optional
 from fastapi import FastAPI
@@ -5,6 +6,8 @@ from pydantic import BaseModel
 
 
 class CoingeckoCoin(BaseModel):
+    """Model of a Coingecko Coin"""
+
     id: int
     symbol: str
     name: str
@@ -21,6 +24,7 @@ class CoingeckoCoin(BaseModel):
 
 
 def generate_random_cg_coin(_id: int) -> CoingeckoCoin:
+    """Generate a random Coingecko Coin"""
     return CoingeckoCoin(
         id=_id,
         symbol="TEST",
